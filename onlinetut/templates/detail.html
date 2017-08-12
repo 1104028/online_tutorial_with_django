@@ -1,0 +1,11 @@
+{% extends 'homepage.html' %}
+
+{% block title %}Tutorials are Here{% endblock %}
+
+{% block body %}
+             {% for tut in course %}
+               <h2>{{ tut.lecture_title}}</h2>
+                <ol class="list-group-item"><a href="{% url 'online:video' tut.id %}">{{ tut.lecture_video}}</a>
+                </ol>
+            {% endfor %}
+{% endblock %}

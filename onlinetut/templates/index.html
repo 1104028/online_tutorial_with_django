@@ -1,0 +1,31 @@
+
+{% extends 'base.html' %}
+{% block body %}
+    <div class="albums-container container-fluid">
+        <div class="row">
+
+
+                <div class="col-md-4 col-lg-2">
+                    <div class="thumbnail ">
+                        <div class="card wow fadeInUp">
+
+                            <hr class="extra-margins">
+        <!--Title-->
+                            <h4>Free and Open Source</h4>
+                            <hr>
+                            <h4>Online Tutorials</h4>
+                            <hr>
+                            <h4><centre>Learning</centre></h4>
+
+                            <!--Text-->
+                            <a href="{% url 'online:register'%}" class="btn btn-success">Register Free</a>
+                        </div>
+
+                    </div>
+                    <!--/.Card content-->
+
+                </div>
+                <!--/.Card-->
+    </div>
+    </div>
+{% endblock %}

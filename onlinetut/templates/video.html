@@ -1,0 +1,13 @@
+
+{% extends 'homepage.html' %}
+
+{% block body %}
+                <h2>Hi all</h2>
+                <div align="center">
+                   <object class="embed-responsive-item">
+                     <video autoplay loop >
+                       <source src="{{ course.lecture_video}}" />
+                     </video>
+                   </object>
+                 </div>
+{% endblock %}

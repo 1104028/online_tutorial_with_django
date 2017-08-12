@@ -1,0 +1,53 @@
+<!-- loads the path to your static files -->
+{% extends 'homepage.html' %}
+
+<link href="dist/css/bootstrap.css" rel="stylesheet">
+<script type="text/javascript" src="dist/js/jquery-1.10.2.js"></script>
+
+{% block body %}
+    <div class="albums-container container-fluid">
+        <div class="row">
+
+            {% for album in list %}
+
+                <div class="col-md-4 col-lg-2">
+                    <div class="thumbnail ">
+
+                        <!--Card image-->
+                        <a href="{% url 'online:detail' album.id %}">
+                            <img src="{{ album.course_logo.url }}" class="img-responsive">
+                        </a>
+                        <div class="caption">
+                            <h2>{{ album.course_title }}</h2>
+                            <h4> {{ album.Teacher_name }}</h4>
+                        </div>
+                        <a href="#">
+                            <div class="mask"></div>
+                        </a>
+
+                        <!--Detail-->
+                        <a href="{% url 'online:detail' album.id %}" class="btn btn-primary">View Details</a>
+                        <!--Delete-->
+                        <form action="" method="post"
+                              style="display:inline;">
+                            {% csrf_token %}
+                            <input type="hidden" name="album_id" value="{{ album.id }}">
+                            <button type="submit" class="btn btn-default btn-sm">
+                                <span class="glyphicon glyphicon-trash"></span>
+                            </button>
+                        </form>
+                        <label for="input-1" class="control-label">Rate This</label>
+                        <input id="input-1" name="input-1" class="rating rating-loading" data-min="0" data-max="5" data-step="1">
+
+
+                    </div>
+                    <!--/.Card content-->
+
+                </div>
+                <!--/.Card-->
+
+
+            {% endfor %}
+    </div>
+    </div>
+{% endblock %}

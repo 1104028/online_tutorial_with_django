@@ -1,0 +1,30 @@
+
+body{
+    background: white url("images/498090512.jpg");
+}
+.navbar{
+    border-radius: 0;
+}
+.navbar-brand{
+   font-family: 'Satisfy',cursive;
+}
+.extra-margins {
+    margin-top: 1rem;
+    margin-bottom: 2.5rem;
+}
+.extra-margins {
+    margin-top: 1rem;
+    margin-bottom: 2.5rem;
+}
+
+main {
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+}
+
+.card {
+        margin: 0 auto; /* Added */
+        float: none; /* Added */
+        margin-bottom: 10px; /* Added */
+}
+
